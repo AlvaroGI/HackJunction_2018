@@ -17,6 +17,9 @@ The path that the family will follow is pre-established, and that allows to gene
   -Predict people flows and direct them to prevent jams.
 
 # How it works (developer POV)
+We employ the Cisco Meraki software to analyze the data of the wifi devices in the shopping center.
+Using Python, we extract the exact location of the family smartphones.
+Then, we use that as input for our Unity code. We have developed an AR game that guides the families through the mall. When their location corresponds to a pre-specified item/shop, a minigame appears. These minigames have been built using Unity and Vuforia, to create 3D AR interactive structures.
 
 # Software required
   -Python 3
