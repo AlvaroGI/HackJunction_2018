@@ -30,7 +30,23 @@ The path that the family will follow is pre-established, and that allows to gene
   -Unity
   
 # Python code
-*Some information (e.g. related to wifi devices) used in the project demo must be kept private and therefore there are some holes to fill in the code we post here.
+First, clone this repo: https://github.com/dexterlabora/cmxreceiver-python.git. Then, update cmxreceiver.py by our modified version. Place our database_to_client.py in the same folder. Then, inside this file, substitute the variable 'client_name' by the name of the device you want to track.
+
+To get the location of the user, do the following. First, execute:
+```
+python3 cmxreceiver.py -v <validator> -s <secret>
+```
+In parallel (another terminal window), execute
+```
+ssh -R findshop.serveo.net:80:localhost:8555 serveo.net
+```
+to get the info from all clients every second. Then, use
+```
+python3 database_to_client.py
+```
+to generate a client_name_loc.out file with the latitude and longitude of the user.
+
+*note: some information (related to wifi devices, e.g. validator and secret) used in the project demo must be kept private and therefore there are some holes to fill in the code we post here. See Cisco Meraki Documentation for more info.
 
 # Unity code
 Unity code can be found at https://drive.google.com/drive/folders/1ZIoYW84mXPkD0A-mhzIQyVF1Jcq6q0MV?usp=sharing.
