@@ -3,8 +3,9 @@ Junction Hackathon, Helsinki 2018
 
 
 # Pre-requisites
--Python 3
+-Python 3 \\
 -Flask
+
 -Unity
 
 # General
