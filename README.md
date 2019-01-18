@@ -12,9 +12,9 @@ Elevators and escalators will also provide a minigame. In this case, it is not A
 The path that the family will follow is pre-established, and that allows to generate compatible paths between all the users in order to prevent jams, which are quite common in peak hours. 
 
 # GOals
-  -Strengthen parental bonds by building a bridge between two commonly OPPOSITE and conflictive activities: shopping and playing.
-  -Educate on healthy lifestyle and responsible consumption with the trivia questions.
-  -Predict people flows and direct them to prevent jams.
+  - Strengthen parental bonds by building a bridge between two commonly OPPOSITE and conflictive activities: shopping and playing.
+  - Educate on healthy lifestyle and responsible consumption with the trivia questions.
+  - Predict people flows and direct them to prevent jams.
 
 # How it works (developer POV)
 We employ the Cisco Meraki software to analyze the data of the wifi devices in the shopping center.
@@ -22,15 +22,11 @@ Using Python, we extract the exact location of the family smartphones.
 Then, we use that as input for our Unity code. We have developed an AR game that guides the families through the mall. When their location corresponds to a pre-specified item/shop, a minigame appears. These minigames have been built using Unity and Vuforia, to create 3D AR interactive structures.
 
 # Software required
-  -Python 3
-
-  -Flask
-  
-  -Cisco Meraki for Python (https://github.com/meraki/dashboard-api-python.git)
-  
-  -Cisco Meraki CMX receiver based on Python with Flask (https://github.com/dexterlabora/cmxreceiver-python.git)
-
-  -Unity
+  * Python 3
+  * Flask
+  * [Cisco Meraki for Python](https://github.com/meraki/dashboard-api-python.git)
+  * [Cisco Meraki CMX receiver based on Python with Flask](https://github.com/dexterlabora/cmxreceiver-python.git)
+  * Unity
   
 # Python code
 First, clone this repo: https://github.com/dexterlabora/cmxreceiver-python.git. Then, update cmxreceiver.py by our modified version. Place our database_to_client.py in the same folder. Then, inside this file, substitute the variable 'client_name' by the name of the device you want to track.
